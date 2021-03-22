@@ -15,7 +15,7 @@
 var accounts = [
 	"michael.air.jordan23@gmail.com",
 	"neil-armstrong@yahoo.com",
-	"satoshi_Nakamoto@gmail.com",
+	"satoshi_nakamoto@gmail.com",
 ];
 
 console.log(accounts);
@@ -28,13 +28,40 @@ var userFound = false;
 for (var i = 0; i < accounts.length; i++) {
 	if (accounts[i] === question) {
 		userFound = true;
-		// document.getElementById("userFound").innerHTML =
-		console.log("Utente trovato");
-		("Email found! Welcome back, Leo and the president were searching for you!");
+
+		// console.log("Utente trovato");
+		document.getElementById("userFound").innerHTML =
+			"Email found! Welcome back, Leo and the president were searching for you!";
+		break;
 	} else {
-		userFound = false;
-		console.log("Utente trovato");
-		// document.getElementById("userFound").innerHTML =
-		("Email not found. Get lost, dumb.");
+		// console.log("Utente non trovato");
+		document.getElementById("userFound").innerHTML =
+			"Email not found. Get lost, dumb.";
 	}
 }
+
+// Gioco dei dadi
+
+// NUmero random giocatore
+
+var player = Math.floor(Math.random() * 6) + 1;
+console.log(player);
+// NUmero random giocatore
+
+var computer = Math.floor(Math.random() * 6) + 1;
+console.log(computer);
+// Stabilire vincitore
+
+var response;
+
+if (player > computer) {
+	response = "Hai vinto!";
+} else if (player == computer) {
+	response = "Pareggio!";
+} else {
+	response = "Ha vinto il computer :(";
+}
+
+document.getElementById("player").innerHTML = "Tu: " + player;
+document.getElementById("computer").innerHTML = "Computer: " + computer;
+document.getElementById("response").innerHTML = response;

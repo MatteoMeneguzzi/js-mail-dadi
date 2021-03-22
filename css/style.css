@@ -7,12 +7,21 @@
 body {
 	text-align: center;
 	background: #000;
+	font-family: "Poppins", sans-serif;
 }
 
 div.wrapper {
 	width: 1070px;
 	margin: 0 auto;
 }
+
 section.email {
+	padding: 80px 0px;
 	background-color: green;
+	color: white;
+}
+
+section.dice {
+	padding: 80px 0px;
+	background-color: white;
 }
